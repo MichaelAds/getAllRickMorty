@@ -1,0 +1,27 @@
+<section>
+  <app-input (infoPersonagem)="pegarInfoPersonagem($event)" (infoPersonagemError)="pegarInfoPersonagemError($event)"></app-input>
+
+  <div *ngIf="!msgError" class="card-personagem">
+
+      <mat-card *ngFor="let personagem of dadosPersonagens" class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ personagem.name }}</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="personagem.image" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button [id]="personagem.id" (click)="eventoCard($event)" mat-button>Ver Mais</button>
+        </mat-card-actions>
+      </mat-card>
+
+  </div>
+  <p *ngIf="msgError" style="color: rgb(248, 107, 107);">{{ msgError }}</p>
+</section>

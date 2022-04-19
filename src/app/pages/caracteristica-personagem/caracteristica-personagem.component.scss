@@ -1,0 +1,17 @@
+.posicao-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-card {
+  width: 300px;
+  margin: 30px;
+  background-color: #3c3e44;
+  color: #fff;
+
+  .mat-card-subtitle {
+    color: #9e9e9e;
+  }
+
+}

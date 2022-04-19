@@ -1,0 +1,8 @@
+<form [formGroup]="buscar" #form="ngForm" (ngSubmit)="buscarPersonagem()" class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nome do personagem</mat-label>
+    <input formControlName="nomePersonagem" matInput>
+  </mat-form-field>
+
+  <button type="submit" mat-flat-button color="primary">Buscar</button>
+</form>
